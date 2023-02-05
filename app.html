@@ -4,11 +4,42 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Montserrat:wght@500&display=swap"
+			rel="stylesheet"
+		/>
 		<script src="app.js" defer></script>
 		<link rel="stylesheet" href="style.css" />
 		<title>Pomodoro</title>
 	</head>
 	<body>
-		<h1>Pomodoro</h1>
+		<div class="wrapper">
+			<div class="logo">
+				<img src="assets/tomato.png" alt="Tomato" /> Pomodoro
+			</div>
+			<form class="timer">
+				<div class="info">
+					Set meditaion for
+					<input
+						type="number"
+						name="time"
+						aria-label="Minutes for metidation"
+						value="10"
+						maxlength="99"
+					/>
+					minutes
+				</div>
+				<div class="countdown">
+					<div class="num" id="min_tens">0</div>
+					<div class="num" id="min">0</div>
+					<div class="dots">:</div>
+					<div class="num" id="sec_tens">0</div>
+					<div class="num" id="sec">0</div>
+				</div>
+				<button type="submit" class="button">Start meditation</button>
+			</form>
+		</div>
 	</body>
 </html>
